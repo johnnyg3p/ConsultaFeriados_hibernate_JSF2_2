@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Cadastro de Curriculo</title>
+</h:head>
+
+
+<h:body>
+	<h1>cadastro de Curriculo</h1>
+
+	<h:form>
+
+		<h:outputText
+			value="Cadastro de Curriculo para vaga = #{cadastroCurriculoBean.vaga}"
+			style="font-weigth:bold; font-size:22px " />
+		<br />
+
+		<h:outputFormat value="Vaga{0} - Cargo{1}" style="color:red">
+			<f:param value="A038D" nome="#{cadastroCurriculoBean.vaga}" />
+			<f:param value="#{cadastroCurriculoBean.cargo}" />
+		</h:outputFormat>
+		<br />
+		<br />
+		
+		<h:outputLabel value="E-mail" />
+		<br/>
+		<h:outputLabel value="Senha" />
+		<br/>
+		<h:outputLabel value="Qualificações" />
+		<br/><br/>
+		
+		<h:commandButton value="cadastrar" />
+
+
+
+	</h:form>
+
+
+</h:body>
+</html>
