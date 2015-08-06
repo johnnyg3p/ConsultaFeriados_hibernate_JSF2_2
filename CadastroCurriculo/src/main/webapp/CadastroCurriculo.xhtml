@@ -13,24 +13,32 @@
 	<h1>cadastro de Curriculo</h1>
 
 	<h:form>
+	
+		<h:graphicImage value="/img/reload.png" />
 
 		<h:outputText
 			value="Cadastro de Curriculo para vaga = #{cadastroCurriculoBean.vaga}"
 			style="font-weigth:bold; font-size:22px " />
 		<br />
 
-		<h:outputFormat value="Vaga{0} - Cargo{1}" style="color:red">
-			<f:param value="A038D" nome="#{cadastroCurriculoBean.vaga}" />
+		<h:outputFormat value="Vaga {0} - Cargo {1}" style="color:red">
+			<f:param value="#{cadastroCurriculoBean.vaga}" />
 			<f:param value="#{cadastroCurriculoBean.cargo}" />
 		</h:outputFormat>
 		<br />
 		<br />
 		
-		<h:outputLabel value="E-mail" />
+		<h:outputLabel value="E-mail " for="email" />
 		<br/>
-		<h:outputLabel value="Senha" />
+		<h:inputText id="email" size = "60"/>
 		<br/>
-		<h:outputLabel value="Qualificações" />
+		<h:outputLabel value="Senha " for="senha" />
+		<br/>
+		<h:inputSecret size="60" id="senha" />
+		<br/>
+		<h:outputLabel value="Qualificações " for="qualificacoes" />
+		<br/>
+		<h:inputTextarea cols="60" rows="5" id="qualificacoes"/>
 		<br/><br/>
 		
 		<h:commandButton value="cadastrar" />
